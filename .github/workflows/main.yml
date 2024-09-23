@@ -42,6 +42,12 @@ jobs:
         with:
           docker_version: '20.10.7'
 
+      - name: Docker login
+        uses: docker/login-action@v2
+        with:
+          username: vranjan041
+          password: ranjan.146
+
       - name: Build the image
         run: docker build -f Dockerfile -t myapp:latest .
 
